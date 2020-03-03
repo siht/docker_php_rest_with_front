@@ -10,7 +10,7 @@ services:
   adminer:
     image: adminer
     ports:
-      - "8080:8080"
+      - "9090:8080"
   app:
     build:
         context: .
@@ -18,6 +18,6 @@ services:
     env_file:
         - "./.env_php"
     ports:
-        - "8008:80"
+        - "8088:80"
     volumes:
       - "./rest_php:/var/www/html"
