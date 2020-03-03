@@ -21,3 +21,4 @@ services:
         - "8088:80"
     volumes:
       - "./rest_php:/var/www/html"
+      - "./apache.conf:/etc/apache2/sites-available/000-default.conf"
