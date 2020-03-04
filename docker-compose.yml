@@ -11,7 +11,7 @@ services:
     image: adminer
     ports:
       - "9090:8080"
-  app:
+  api:
     build:
         context: .
         dockerfile: php_apache.Dockerfile
@@ -20,5 +20,4 @@ services:
     ports:
         - "8088:80"
     volumes:
-      - "./rest_php:/var/www/html"
       - "./apache.conf:/etc/apache2/sites-available/000-default.conf"
