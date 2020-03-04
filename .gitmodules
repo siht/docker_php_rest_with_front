@@ -1,0 +1,3 @@
+[submodule "src/php-profile-rest-api"]
+	path = src/php-profile-rest-api
+	url = https://github.com/siht/php-profile-rest-api.git
