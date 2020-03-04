@@ -16,7 +16,7 @@ services:
         context: .
         dockerfile: php_apache.Dockerfile
     env_file:
-        - "./.env_php"
+        - "./.env_api"
     ports:
         - "8088:80"
     volumes:
