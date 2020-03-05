@@ -39,7 +39,7 @@ With the docker images generated run in the root of this project
 
 ```sh
 # linux users
-docker run -ti --rm -v "$PWD/src/php-profile-rest-api:/app" -w "/app" --user "$(id -u):$(id -g)" new_php_app composer install
+docker run -ti --rm -v "$PWD/src/php-profile-rest-api:/app" -w "/app" --user "$(id -u):$(id -g)" new_php_api composer install
 docker run -ti --rm -v "$PWD/src/node_simple_static_server:/app" -w "/app" --user "$(id -u):$(id -g)" node:10.16.3-alpine npm i
 ```
 
