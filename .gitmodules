@@ -1,3 +1,6 @@
 [submodule "src/php-profile-rest-api"]
 	path = src/php-profile-rest-api
 	url = https://github.com/siht/php-profile-rest-api.git
+[submodule "src/node_simple_static_server"]
+	path = src/node_simple_static_server
+	url = https://github.com/siht/node_simple_static_server.git
