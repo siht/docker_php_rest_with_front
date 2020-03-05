@@ -3,4 +3,11 @@ version: '3'
 services:
   api:
     volumes:
-      - "./rest_php:/var/www/html"
+      - "./src/php-profile-rest-api:/var/www/html"
+  frontend_app:
+    volumes:
+      - ./src/node_simple_static_server:/app
+    entrypoint:
+      - "npm"
+      - "run"
+      - "dev"
