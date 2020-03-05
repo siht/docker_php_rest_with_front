@@ -1,6 +1,6 @@
 FROM php:7.4.3-apache
 
-COPY ./rest_php /var/www/html
+COPY ./src/php-profile-rest-api /var/www/html
 
 RUN docker-php-ext-install pdo_mysql && \
     apt update && \
