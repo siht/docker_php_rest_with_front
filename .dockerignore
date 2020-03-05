@@ -1,1 +1,2 @@
-rest_php/vendor
+vendor
+node_modules
