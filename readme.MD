@@ -8,16 +8,19 @@ This project needs to you have installed docker and docker-compose.
 
 Also the code requirements are in mode git submodule, but if you search for the links to the other projects
 
-- [php-profile-rest-api](https://github.com/siht/php-profile-rest-api) (==0.0.3)
-- [node_simple_static_server](https://github.com/siht/node_simple_static_server.git) (<=0.1.3)
+- [php-profile-rest-api](https://github.com/siht/php-profile-rest-api) (==0.0.5)
+- [node_simple_static_server](https://github.com/siht/node_simple_static_server.git) (==0.1.4)
 
 ## how to run
 
 If only want to watch how this project works run in your terminal
 
 ```sh
-git pull
+git clone --recurse-submodules https://github.com/siht/docker_php_rest_with_front.git
 docker-compose up
+
+## wait until api already up (only if database is not initialized)
+docker-compose exec api vendor/bin/doctrine orm:schema-tool:create
 ```
 
 ### development mode
@@ -27,7 +30,7 @@ docker-compose up
 If you want to modify some content because you want to improve this development run
 
 ```sh
-git pull
+git clone --recurse-submodules  https://github.com/siht/docker_php_rest_with_front.git
 docker-compose build
 ```
 
@@ -49,4 +52,7 @@ Once you build images and install dependencies only left run.
 
 ```sh
 docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
+
+## wait until api already up (only if database is not initialized)
+docker-compose exec api vendor/bin/doctrine orm:schema-tool:create
 ```
