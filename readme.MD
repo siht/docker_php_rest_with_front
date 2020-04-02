@@ -9,7 +9,7 @@ This project needs to you have installed docker and docker-compose.
 Also the code requirements are in mode git submodule, but if you search for the links to the other projects
 
 - [php-profile-rest-api](https://github.com/siht/php-profile-rest-api) (==0.0.5)
-- [node_simple_static_server](https://github.com/siht/node_simple_static_server.git) (==0.1.4)
+- [node_simple_static_server](https://github.com/siht/node_simple_static_server.git) (<=0.1.4)
 
 ## how to run
 
@@ -17,6 +17,19 @@ If only want to watch how this project works run in your terminal
 
 ```sh
 git clone --recurse-submodules https://github.com/siht/docker_php_rest_with_front.git
+```
+
+then create two files
+
+- ".env_api" with CONNECTION_STRING, IMGUR_CLIENT_ID, IMGUR_URL variables setted
+- ".env_front" with FRONT_PORT, API_URL variables setted
+
+get more information about environment variables:
+
+- [php-profile-rest-api](https://github.com/siht/php-profile-rest-api) (==0.0.5)
+- [node_simple_static_server](https://github.com/siht/node_simple_static_server.git) (<=0.1.4)
+
+```sh
 docker-compose up
 
 ## wait until api already up (only if database is not initialized)
@@ -30,7 +43,20 @@ docker-compose exec api vendor/bin/doctrine orm:schema-tool:create
 If you want to modify some content because you want to improve this development run
 
 ```sh
-git clone --recurse-submodules  https://github.com/siht/docker_php_rest_with_front.git
+git clone --recurse-submodules https://github.com/siht/docker_php_rest_with_front.git
+```
+
+then create two files
+
+- ".env_api" with CONNECTION_STRING, IMGUR_CLIENT_ID, IMGUR_URL variables setted
+- ".env_front" with FRONT_PORT, API_URL variables setted
+
+get more information about environment variables:
+
+- [php-profile-rest-api](https://github.com/siht/php-profile-rest-api) (==0.0.5)
+- [node_simple_static_server](https://github.com/siht/node_simple_static_server.git) (<=0.1.4)
+
+```sh
 docker-compose build
 ```
 
