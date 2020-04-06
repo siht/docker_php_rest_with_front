@@ -1,4 +1,4 @@
-FROM node:10.16.3-alpine
+FROM node:12.16.1-alpine
 
 COPY ./src/node_simple_static_server /app
 WORKDIR /app
